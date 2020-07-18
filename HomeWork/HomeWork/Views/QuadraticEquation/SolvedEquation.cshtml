@@ -1,0 +1,40 @@
+﻿@model HomeWork.Models.QuadraticEquationPL
+@{
+    ViewBag.Title = "SolvedEquation";
+}
+
+<h2>Solved equation</h2>
+
+
+@if (Model.B > 0 && Model.C > 0)
+{
+    <h2>Quadratic equation: @Model.A · x<sup>2</sup> +@Model.B · x +@Model.C = 0</h2>
+}
+@if (Model.B > 0 && Model.C < 0)
+{
+    <h2>Quadratic equation: @Model.A · x<sup>2</sup> +@Model.B · x @Model.C = 0</h2>
+}
+@if (Model.B < 0 && Model.C > 0)
+{
+    <h2>Quadratic equation: @Model.A · x<sup>2</sup> @Model.B · x +@Model.C = 0</h2>
+}
+
+@if (Model.D > 0)
+{
+    <h2>Equals sign has two roots</h2>
+    <h2>X1 = @Model.X1</h2>
+    <h2>X2 = @Model.X2</h2>
+}
+@if (Model.D == 0)
+{
+    <h2>Equals sign has one roots</h2>
+    <h2>X1 = @Model.X1</h2>
+
+}
+@if (Model.D < 0)
+{
+    <h2>Equation has no roots</h2>
+}
+
+
+

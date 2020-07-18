@@ -1,0 +1,30 @@
+﻿@*@model BusinessLayer.Models.QuadraticEquationDTO*@
+
+@{ViewBag.Title = "CreateEquation";}
+
+<h2>Quadratic equation</h2>
+<h2>ax<sup>2</sup>+bx+c=0</h2>
+
+<div class="row">
+    <form method="post">
+        <p>
+            <label>A</label>
+            <br />
+            <input type="text" name="A" />
+        </p>
+
+        <p>
+            <label>B</label>
+            <br />
+            <input type="text" name="B" />
+        </p>
+
+        <p>
+            <label>C</label>
+            <br />
+            <input type="text" name="C" />
+        </p>       
+
+        <button type="submit" value="save">Solve</button>
+    </form>    
+</div>
